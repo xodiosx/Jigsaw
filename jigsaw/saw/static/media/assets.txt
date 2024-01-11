@@ -1,0 +1,37 @@
+$= 'static/media/st.gif';
+$= 'static/media/st.gif';
+$= 'static/media/st.gif';
+$= 'static/media/st.gif';
+$= 'static/media/st.gif';
+$= 'static/media/st.gif';
+$= 'static/media/st.gif';
+$= 'static/media/st.gif';
+$= 'static/media/st.gif';
+$= 'static/media/st.gif';
+$= 'static/media/st.gif';
+$= 'static/media/st.gif';
+$= 'static/media/st.gif';
+$= 'static/media/st.gif';
+$= 'static/media/st.gif';
+$= 'static/media/st.gif';
+$= 'static/media/st.gif';
+$= 'static/media/st.gif';
+$= 'static/media/st.gif';
+$= 'static/media/st.gif';
+$= 'static/media/st.gif';
+$= 'static/media/st.gif';
+$= 'static/media/st.gif';
+$= 'static/media/st.gif';
+$= 'static/media/st.gif';
+$= 'static/media/st.gif';
+$= 'static/media/st.gif';
+
+
+
+
+
+
+
+
+
+
