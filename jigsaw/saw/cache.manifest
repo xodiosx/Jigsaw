@@ -5,7 +5,7 @@ CACHE:
 
 # HTML
 index.html
- ./colormix/index.html
+../colormix/index.html
 ../colormix/index2.html
 ../piano/index.html
 ../piano/index2.html
@@ -18,6 +18,10 @@ index.html
 static/css/main.f00bcd27.chunk.css
 
 # external resources
+../colormix/cs1/v1.mp4
+../piano/cs2/v1.mp4
+../Rubik/cs3/v1.mp4
+../jigsaw/cs4/v1.mp4
 ../saw.mp3
 ../bgm.mp3
 ../ovrr.gif
@@ -27,7 +31,7 @@ static/css/main.f00bcd27.chunk.css
 ../b1.png
 ../b2.png
 ../b3.png
-../b4png
+../b4.png
 static/media/Pirate_Cove-1.gif
 static/media/East_Hall-f.gif
 static/media/East_Hall-c.gif
@@ -150,7 +154,7 @@ static/js/main.a9c2c3c5.chunk.js
 ../b1.png
 ../b2.png
 ../b3.png
-../b4png
+../b4.png
 static/media/Pirate_Cove-1.gif
 static/media/East_Hall-f.gif
 static/media/East_Hall-c.gif
@@ -262,6 +266,12 @@ static/media/ss/doorr.mp3
 
 # WAV
 
+
+# VIDEO
+../colormix/cs1/v1.mp4
+../piano/cs2/v1.mp4
+../Rubik/cs3/v1.mp4
+../jigsaw/cs4/v1.mp4
 
 NETWORK:
 *
