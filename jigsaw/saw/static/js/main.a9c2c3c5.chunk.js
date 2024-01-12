@@ -33,16 +33,32 @@
 	}
 
 	
-hideAdressbar();
+
 
 		if (window.applicationCache != null) {checkAppCache();
 }
 
 setTimeout(function(){
-   
+   hideAdressbar();
 document.getElementById('rready').style.display="none";
+var  imggStorage = localStorage.getItem("imgg");
+
+//alert (imggStorage)
+
+
+
+if(imggStorage=="false"||imggStorage==null)
+{
+imggStorage = false;
+localStorage.setItem("imgg", JSON.stringify(imggStorage));
 loadAssets();
+}else {
+document.getElementById('rready').style.display="block";
+}
+
  },10)
+
+
 
 const loadAssets = () => {
 
@@ -55,10 +71,6 @@ document.getElementById('preload-container').innerHTML = '<h9> ,,, جاري تح
   queue.on("complete", handleComplete, this);
 
   queue.loadManifest([
-{id:'img100',src:'../colormix/cs1/v1.mp4'},
-{id:'img101',src:'../piano/cs2/v1.mp4'},
-{id:'img102',src:'../Rubik/cs3/v1.mp4'},
-{id:'img103',src:'../jigsaw/cs4/v1.mp4'},
 {id:'img104',src:'../b1.png'},
 {id:'img105',src:'../b2.png'},
 {id:'img106',src:'../b3.png'},
@@ -191,7 +203,14 @@ navigator.vibrate([
   100, 50, 100, 50, 100, 50, 200,
 ])
 setTimeout(function(){
-   loaded=true;
+imggStorage = localStorage.getItem("imgg");
+   if(imggStorage=="false")
+{
+imggStorage = true;
+
+localStorage.setItem("imgg", JSON.stringify(imggStorage));
+} 
+
 document.getElementById('rready').style.display="block";
 document.getElementById('preload-container').style.display="none";
  },2500)
