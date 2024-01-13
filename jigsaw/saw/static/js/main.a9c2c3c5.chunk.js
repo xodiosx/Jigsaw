@@ -26,11 +26,7 @@
 
 	// Action starts here:
 
-	function hideAdressbar() {
-		console.log("hide adressbar");
-		$("html").scrollTop(1);
-		$("body").scrollTop(1);
-	}
+	
 
 	
 
@@ -39,8 +35,10 @@
 }
 
 setTimeout(function(){
-   hideAdressbar();
+   
 document.getElementById('rready').style.display="none";
+
+
 var  imggStorage = localStorage.getItem("imgg");
 
 //alert (imggStorage)
@@ -53,7 +51,16 @@ imggStorage = false;
 localStorage.setItem("imgg", JSON.stringify(imggStorage));
 loadAssets();
 }else {
+setTimeout(function(){
+document.getElementById('preload-container').style.display="none";
 document.getElementById('rready').style.display="block";
+
+
+ },20)
+
+document.getElementById('rready').style.display="block";
+
+
 }
 
  },10)
@@ -79,7 +86,7 @@ document.getElementById('preload-container').innerHTML = '<h9> ,,, جاري تح
 {id:'img109',src:'../ovrp.gif'},
 {id:'img110',src:'../ovrr.gif'},
 {id:'img111',src:'../ovrj.gif'},
-{id:'img112',src:'../bgm.mp3'},
+{id:'img112',src:'../bbgm.mp3'},
 {id:'img113',src:'../saw.mp3'},
 {id:'img0',src:diir+'Pirate_Cove-1.gif'},
 {id:'img1',src:diir+'East_Hall-f.gif'},
@@ -165,7 +172,7 @@ document.getElementById('preload-container').innerHTML = '<h9> ,,, جاري تح
 {id:'img80',src:diir+'ss/bgm21.mp3'},
 {id:'img81',src:diir+'ss/cryl.mp3'},
 {id:'img82',src:diir+'ss/knockl.mp3'},
-{id:'img83',src:diir+'ss/bgm.mp3'},
+{id:'img83',src:diir+'ss/bbgm.mp3'},
 {id:'img84',src:diir+'ss/cryr.mp3'},
 {id:'img85',src:diir+'ss/wsl.mp3'},
 {id:'img86',src:diir+'ss/cry2l.mp3'},
@@ -222,7 +229,7 @@ var hellon= new Audio("static/media/hello.mp3");
 
 var bgm21= new Audio("static/media/ss/bgm21.mp3");
 var bgm22= new Audio("static/media/ss/bgm22.mp3");
-var bgm= new Audio("static/media/ss/bgm.mp3");
+var bgm= new Audio("static/media/ss/bbgm.mp3");
 var cryl= new Audio("static/media/ss/cryl.mp3");
 var cryr= new Audio("static/media/ss/cryr.mp3");
 var cry2l= new Audio("static/media/ss/cry2l.mp3");
@@ -714,23 +721,50 @@ setTimeout(function(){
 
 
 setInterval(function(){
+var bgm21= new Audio("static/media/ss/bgm21.mp3");
+var bgm22= new Audio("static/media/ss/bgm22.mp3");
+
+if(hhour==1&&powr<84){
 
 
-if(!bgmplayed&&powr>3&&hhour<3&&hhour>0&&powr<82){
+
+if(!bgmplayed&&powr>3&hhour==1){
+
+
+bgm21.play();
+bgm21.volume = 1;
+bgm.volume = 0.1;
+setTimeout(function(){
+bgmplayed=true;
+ },20)
+
+
+}
+
+//bgmbgm();
+} else if(hhour==2&&powr>3){
 
 
 
-bgmbgm();
-} else if(!bgmplayed2&&powr>3&&hhour<3&&hhour>1){
+if(!bgmplayed2&&powr>3&&hhour==2){
 
 
-bgmbgm2();
+bgm22.play();
+bgm22.volume = 1;
+bgm.volume = 0.1;
+setTimeout(function(){
+bgmplayed2=true;
+ },20)
+
+}
+
+//bgmbgm2();
 } else {
 bgm.play();
 bgm.volume = 0.1;
 }
 
- },1000)
+ },500)
 
 
 
