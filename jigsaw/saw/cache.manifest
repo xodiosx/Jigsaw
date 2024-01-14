@@ -15,6 +15,7 @@ index.html
 ../jigsaw/index2.html
 
 # CSS
+lod.css
 static/css/main.f00bcd27.chunk.css
 
 # external resources
@@ -118,7 +119,7 @@ static/media/ss/bgm22.mp3
 static/media/ss/bgm21.mp3
 static/media/ss/cryl.mp3
 static/media/ss/knockl.mp3
-static/media/ss/bgm.mp3
+static/media/ss/bbgm.mp3
 static/media/ss/cryr.mp3
 static/media/ss/wsl.mp3
 static/media/ss/cry2l.mp3
