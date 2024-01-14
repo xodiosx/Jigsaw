@@ -53,7 +53,7 @@ loadAssets();
 }else {
 setTimeout(function(){
 loadAssets2();
-document.getElementById('rready').style.display="block";
+document.getElementById('rready').style.display="none";
 
 
  },20)
@@ -248,22 +248,14 @@ document.getElementById('preload-container').innerHTML = '<h9> ,,,% جاري ت�
 {id:'img111',src:'../ovrj.gif'},
 {id:'img112',src:'../bgm.mp3'},
 {id:'img113',src:'../saw.mp3'},
-{id:'img0',src:diir2+'Pirate_Cove-1.gif'},
-{id:'img1',src:diir2+'East_Hall-f.gif'},
-{id:'img2',src:diir2+'East_Hall-c.gif'},
+{id:'img2',src:diir2+'East_Hall.gif'},
 {id:'img3',src:diir2+'Freddy-Jumpscare1.gif'},
 {id:'img4',src:diir2+'Restrooms2.gif'},
-{id:'img6',src:diir2+'EHallCorner-c.gif'},
-{id:'img7',src:diir2+'EHallCorner-f.gif'},
-{id:'img8',src:diir2+'East_Hall-c-f.gif'},
-{id:'img9',src:diir2+'Pirate_Cove-2.gif'},
 {id:'img11',src:diir2+'Bonnie-Jumpscare.gif'},
 {id:'img12',src:diir2+'Chica-Jumpscare.gif'},
 {id:'img13',src:diir2+'Foxy-Jumpscare.gif'},
 {id:'img14',src:diir2+'Foxy-Jumpscare.gif'},
-{id:'img15',src:diir2+'Backstage-b.gif'},
-{id:'img16',src:diir2+'West_Hall-b.gif'},
-{id:'img17',src:diir2+'Pirate_Cove-3.gif'},
+{id:'img17',src:diir2+'Pirate_Cove.gif'},
 {id:'img94',src:diir2+'SupplyRoom.gif'},
 {id:'img20',src:diir2+'DinningArea.gif'},
 {id:'img21',src:diir2+'DinningArea2.gif'},
