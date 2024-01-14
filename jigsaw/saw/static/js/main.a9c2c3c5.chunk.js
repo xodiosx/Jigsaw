@@ -52,7 +52,7 @@ localStorage.setItem("imgg", JSON.stringify(imggStorage));
 loadAssets();
 }else {
 setTimeout(function(){
-document.getElementById('preload-container').style.display="none";
+loadAssets();
 document.getElementById('rready').style.display="block";
 
 
@@ -70,7 +70,7 @@ document.getElementById('rready').style.display="block";
 const loadAssets = () => {
 
  const diir='static/media/'; 
-document.getElementById('preload-container').innerHTML = '<h9> ,,, جاري تحميل النظام ,,, <span id="loading-percent">' + 0 + '</span>%</h9>';
+document.getElementById('preload-container').innerHTML = '<h9> ,,,% جاري تحميل النظام ,,, <span id="loading-percent">' + 0 + '</span></h9>';
 
   const queue = new createjs.LoadQueue();
 
@@ -217,9 +217,12 @@ imggStorage = true;
 
 localStorage.setItem("imgg", JSON.stringify(imggStorage));
 } 
-
+document.getElementById('preload-container').innerHTML = '<h9>النظام جاهز!</h9>';
 document.getElementById('rready').style.display="block";
+
+setTimeout(function(){
 document.getElementById('preload-container').style.display="none";
+ },2500)
  },2500)
 };
 
@@ -1187,7 +1190,7 @@ cryr.pause();
 cryl.pause();
 } else if ("EastHall"===n)
 {}
-return"W.HallCorner"===n&&(n="WHallCorner"),"E.HallCorner"===n&&(n="EHallCorner"),Da["".concat(n).concat(e).concat("PirateCove"===n?a:"")]}(i,s,r.camera);m(c)}),[s,t,a,t.Foxy.camera]),Object(r.useEffect)((function(){if(a&&c){var e=Math.floor(2*Math.random());(1==e||2==e?new Audio(ja.a):new Audio(La.a)).play()}}),[a]),i.a.createElement("div",null,u?null:i.a.createElement(Ba,{handleCameraButton:function(){l({type:"SET_IS_OPEN"})},style:{zIndex:"1"}}),c?i.a.createElement(i.a.Fragment,null,i.a.createElement("img",{draggable:"false",className:"camera opening animation","data-left-door":o.leftDoor,"data-right-door":o.rightDoor,id:"camera",src:J.Images.Up,alt:"Opening camera",style:{margin:0,width:"100vw",height:"100vh",position:"absolute",top:0}}),i.a.createElement("div",{className:"camera-container",style:{display:"none"},ref:h},i.a.createElement(Ia,{handleCameraChange:function(e){e.preventDefault(),J.Sounds.CameraChange.play(),l({type:"CHANGE_CAMERA",content:e.target.title})}}),a?i.a.createElement("img",{draggable:"false",src:Na.a,alt:"Animatronics are moving",className:"animatronics-true",style:{height:"100vh",width:"100vw",backgroundColor:"black",position:"absolute"}}):i.a.createElement("img",{src:p,alt:"Camera",className:"camera-img",style:{width:"100vw",position:"absolute"}}),i.a.createElement("img",{alt:"Static",src:"static/media/st.gif",style:{opacity:"0.4",width:"100%",height:"100%"},draggable:"false",className:"static-open"}))):i.a.createElement("img",{draggable:"false",className:"camera opening",id:"camera",ref:g,src:J.Images.Down,alt:"Closing camera",style:{width:"100vw",height:"100vh",position:"absolute"}}))}));var _a=Object(p.b)((function(e){return{hour:e.configReducer.hour,energy:e.configReducer.energy}}))((function(e){ 
+return"W.HallCorner"===n&&(n="WHallCorner"),"E.HallCorner"===n&&(n="EHallCorner"),Da["".concat(n).concat(e).concat("PirateCove"===n?a:"")]}(i,s,r.camera);m(c)}),[s,t,a,t.Foxy.camera]),Object(r.useEffect)((function(){if(a&&c){var e=Math.floor(2*Math.random());(1==e||2==e?new Audio(ja.a):new Audio(La.a)).play()}}),[a]),i.a.createElement("div",null,u?null:i.a.createElement(Ba,{handleCameraButton:function(){l({type:"SET_IS_OPEN"})},style:{zIndex:"1"}}),c?i.a.createElement(i.a.Fragment,null,i.a.createElement("img",{draggable:"false",className:"camera opening animation","data-left-door":o.leftDoor,"data-right-door":o.rightDoor,id:"camera",src:J.Images.Up,alt:"Opening camera",style:{margin:0,width:"100vw",height:"100vh",position:"absolute",top:0}}),i.a.createElement("div",{className:"camera-container",style:{display:"none"},ref:h},i.a.createElement(Ia,{handleCameraChange:function(e){e.preventDefault(),J.Sounds.CameraChange.play(),l({type:"CHANGE_CAMERA",content:e.target.title})}}),a?i.a.createElement("img",{draggable:"false",src:Na.a,alt:"Animatronics are moving",className:"animatronics-true",style:{height:"100vh",width:"100vw",backgroundColor:"black",position:"absolute"}}):i.a.createElement("img",{src:p,alt:"Camera",className:"camera-img",style:{height:"100vh",width:"100vw",position:"absolute"}}),i.a.createElement("img",{alt:"Static",src:"static/media/st.gif",style:{opacity:"0.4",width:"100%",height:"100%"},draggable:"false",className:"static-open"}))):i.a.createElement("img",{draggable:"false",className:"camera opening",id:"camera",ref:g,src:J.Images.Down,alt:"Closing camera",style:{width:"100vw",height:"100vh",position:"absolute"}}))}));var _a=Object(p.b)((function(e){return{hour:e.configReducer.hour,energy:e.configReducer.energy}}))((function(e){ 
 
 engy=e.energy;
 
