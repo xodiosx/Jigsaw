@@ -52,7 +52,7 @@ localStorage.setItem("imgg", JSON.stringify(imggStorage));
 loadAssets();
 }else {
 setTimeout(function(){
-loadAssets();
+loadAssets2();
 document.getElementById('rready').style.display="block";
 
 
@@ -225,6 +225,106 @@ document.getElementById('preload-container').style.display="none";
  },2500)
  },2500)
 };
+
+
+const loadAssets2 = () => {
+const diir2='static/media/'; 
+ 
+document.getElementById('preload-container').innerHTML = '<h9> ,,,% جاري تحديث النظام ,,, <span id="loading-percent">' + 0 + '</span></h9>';
+
+  const queue2 = new createjs.LoadQueue();
+
+  queue2.on("progress", handleProgress, this);
+  queue2.on("complete", handleComplete, this);
+
+  queue2.loadManifest([
+{id:'img104',src:'../b1.png'},
+{id:'img105',src:'../b2.png'},
+{id:'img106',src:'../b3.png'},
+{id:'img107',src:'../b4.png'},
+{id:'img108',src:'../ovrc.gif'},
+{id:'img109',src:'../ovrp.gif'},
+{id:'img110',src:'../ovrr.gif'},
+{id:'img111',src:'../ovrj.gif'},
+{id:'img112',src:'../bgm.mp3'},
+{id:'img113',src:'../saw.mp3'},
+{id:'img0',src:diir2+'Pirate_Cove-1.gif'},
+{id:'img1',src:diir2+'East_Hall-f.gif'},
+{id:'img2',src:diir2+'East_Hall-c.gif'},
+{id:'img3',src:diir2+'Freddy-Jumpscare1.gif'},
+{id:'img4',src:diir2+'Restrooms2.gif'},
+{id:'img6',src:diir2+'EHallCorner-c.gif'},
+{id:'img7',src:diir2+'EHallCorner-f.gif'},
+{id:'img8',src:diir2+'East_Hall-c-f.gif'},
+{id:'img9',src:diir2+'Pirate_Cove-2.gif'},
+{id:'img11',src:diir2+'Bonnie-Jumpscare.gif'},
+{id:'img12',src:diir2+'Chica-Jumpscare.gif'},
+{id:'img13',src:diir2+'Foxy-Jumpscare.gif'},
+{id:'img14',src:diir2+'Foxy-Jumpscare.gif'},
+{id:'img15',src:diir2+'Backstage-b.gif'},
+{id:'img16',src:diir2+'West_Hall-b.gif'},
+{id:'img17',src:diir2+'Pirate_Cove-3.gif'},
+{id:'img94',src:diir2+'SupplyRoom.gif'},
+{id:'img20',src:diir2+'DinningArea.gif'},
+{id:'img21',src:diir2+'DinningArea2.gif'},
+{id:'img22',src:diir2+'Restrooms.gif'},
+{id:'img25',src:diir2+'West_Hall.gif'},
+{id:'img28',src:diir2+'EHallCorner.gif'},
+{id:'img29',src:diir2+'SupplyRoom2.gif'},
+{id:'img30',src:diir2+'East_Hall.gif'},
+{id:'img31',src:diir2+'305.gif'},
+{id:'img32',src:diir2+'Freddy.gif'},
+{id:'img70',src:diir2+'jumpscare.mp3'},
+{id:'img71',src:diir2+'powerdown.mp3'},
+{id:'img72',src:diir2+'haul.ogg'},
+{id:'img73',src:diir2+'welcome.mp3'},
+{id:'img96',src:diir2+'powerdown2.mp3'},
+{id:'img77',src:diir2+'Dead.mp3'},
+{id:'img78',src:diir2+'music box.mp3'},
+{id:'img94',src:diir2+'ss/doorl.mp3'},
+{id:'img95',src:diir2+'ss/lsr.mp3'},
+{id:'img96',src:diir2+'ss/doorr.mp3'}
+
+  ]);
+
+  queue2.load();
+};
+
+
+
+const handleProgress2 = (e) => {
+
+  let percent2 = Math.round(e.progress * 100);
+
+  document.getElementById('loading-percent').innerHTML = percent2;
+};
+
+
+
+const handleComplete2 = () => {
+
+  document.getElementById('preload-container').innerHTML = '<h9>جاري التشغيل!</h9>';
+navigator.vibrate([
+  100, 50, 100, 50, 100, 50, 200,
+])
+setTimeout(function(){
+imggStorage = localStorage.getItem("imgg");
+   if(imggStorage=="false")
+{
+imggStorage = true;
+
+localStorage.setItem("imgg", JSON.stringify(imggStorage));
+} 
+document.getElementById('preload-container').innerHTML = '<h9>النظام جاهز!</h9>';
+document.getElementById('rready').style.display="block";
+
+setTimeout(function(){
+document.getElementById('preload-container').style.display="none";
+ },2500)
+ },2500)
+};
+
+
 
 
 
