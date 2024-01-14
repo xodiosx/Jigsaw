@@ -7,12 +7,13 @@ font-weight: bold;
 
 
 #preload-container {
+//opacity:0.8;
 font-size: 20px;
 position: fixed;
-top:50%;
+top:0%;
   width: 100%;
   text-align: center;
-  padding-top: 80px;
+  padding-top: 0px;
   color: red;
 z-index:99999;
 }
